@@ -1,0 +1,288 @@
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	outline:none;
+}
+input, select, button, textarea {
+	margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+	padding: 0; 				/* убираем внутренние отступы для текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+	color: #000;
+	text-align: left;
+	font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+	min-height:100%;
+}
+a, a:visited, a:hover, a:focus, a:active  { /* порядок правил для ссылок имеет значение */
+	
+	text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+}
+img{
+	max-width:100%;
+}
+.clr{
+	clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/* --------------- /базовые настройки ---------*/
+/* --------------- reset end ---------*/
+body {
+	font-family: Tahoma, sans-serif;
+	font-size: 10pt;
+}
+.container {
+		max-width: 1030px;
+		margin: 0 auto; 
+	}
+h2 {
+	font-size: 15pt;
+	margin: 5px 0;
+}
+h4 {
+	font-size: 11pt;
+	font-weight: bold;
+	margin: 5px -16px 5px 0;
+}
+h5 {
+	display: inline-block;
+	font-size: 8pt;
+	font-weight: bold;
+	padding: 5px 10px;
+	text-transform: uppercase;
+	background-color: #f8b71a;
+}
+/* ------------------------- header ------------------------*/
+body > header {
+	background-color: #ededed;
+	height: 50px;
+	margin-bottom: 50px;
+}
+	header nav li {
+		float: left;
+		height: 100%;
+	}
+	header nav li a {
+		font-family: Georgia, sans-serif;
+		font-size: 12pt;
+		display: block;
+		padding: 0 15px;
+		line-height: 50px;
+		color: #636b74;
+		height: 50px;
+	}
+	header nav li:hover {
+		background-color: #d9dadc;
+		color: #636b74;
+	}
+	header nav li.active a{
+		background-color: #6a737c;
+		border-top: 4px solid #f8b71a;
+		border-bottom: 4px solid #6a737c;
+		height: 42px;
+		line-height: 42px;
+		color: #fff;
+	}
+	
+/* ------------------------------- header end ---------------------------------- */
+/* ------------------------------- main ---------------------------------- */
+main {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+	section {
+		width: 30%;
+		height: 100%;
+	}
+	
+	.title-frame {
+		display: block;
+		position: relative;
+		text-align: center;
+		margin-bottom: 15px;
+	}
+	.title-frame::before, .title-frame::after {
+		content: "";
+		display: block;
+		position: absolute;
+		border-right: 2px solid #dadbdd;
+		border-left: 2px solid #dadbdd;
+		border-bottom: 2px solid #dadbdd;
+		width: 100%;
+		height: 8px;
+		top: 8px;
+		left: 0;
+		z-index: -1;
+	}
+	.title-frame::after {
+		transform: rotate(180deg);
+		top: 16px;
+	}
+	.title-frame > h3 {
+		display: inline-block;
+		background-color: #6a737c;
+		border-top: 4px solid #f8b71a;
+		padding: 0 25px;
+		font-family: Georgia, sans-serif;
+		font-size: 12pt;
+		height: 32px;
+		line-height: 28px;
+		color: #fff;
+	}
+	.main-news article {
+		padding: 0 10px 10px;
+	}
+	article p {
+		padding-bottom: 5px;
+	}
+	article p span {
+		color: #e3a511;
+	}
+	article p .second-name {
+		margin-left: 44px;
+	}
+	article p .pic {
+		margin: 0 5px 0 15px;
+	}
+	.datetime {
+		color: #a1a1a1;
+		line-height: 11pt;
+		padding-top: 0px;
+	}
+	article .photo {
+		float: left;
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
+	.three-dots-link {
+		text-decoration: underline;
+		color: #f8b71a;
+	}
+	.hot-news {
+		background-color: #f0f0f0;
+		padding: 5px 10px;
+		margin: -5px -10px;
+	}
+	.news + .hot-news {
+		margin-top: 0px;
+	}
+	.hot-news + .news {
+		margin-top: 10px;
+	}
+	.hot-news p:not(.datetime) {
+		font-weight: bold;
+	}
+	.articles-news + .articles-news {
+		margin-top: 15px;
+	}
+	.questions ul {
+		list-style: none;
+	}
+	.questions input[type="radio"] {
+		margin-left: -24px;
+		margin-right: 10px;
+	}
+	.questions input[type="submit"] {
+		display: block;
+		border: none;
+		border-radius: 6px;
+		background-color: #f8b71a;
+		font-size: 11pt;
+		font-weight: bold;
+		text-transform: uppercase;
+		padding: 10px 15px;
+		margin: 20px auto 15px;
+		cursor: pointer;
+	}
+	.questions .result {
+		display: block;
+		text-align: center;		
+		text-decoration: underline;
+		color: #383a3c;
+	}
+	.question-title {
+		max-width: 255px;
+		margin: 0 auto 15px;
+		border-bottom: 1px solid #cccdd1;
+		font-size: 11pt;
+		font-weight: bold;
+		color: #383a3c;
+	}
+	.questions li {
+		margin-left: 25px;
+		margin-bottom: 10px;
+	}
+/* --------------- main end --------------------- */
+/* --------------- footer --------------------- */
+
+footer {
+	margin-top: 35px;
+	background-color: #6a737c;
+}
+	footer > .container {
+		padding: 50px 15px;
+	}
+	footer p {
+		font-size: 9pt;
+		color: #b5bbc1;
+	}
+	footer hr {
+		border-color: #8c949c;
+	}
+	footer ul {
+		list-style: none;
+	}
+	footer li {
+		display: inline-block;
+		color: #fff;
+		margin-right: 45px;
+	}
+	footer li a {
+		color: #fff;
+	}
+	footer li a:hover {
+		filter: drop-shadow(0 0 2px #f8b71a);
+	}
+/* --------------- footer end --------------------- */
